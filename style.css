@@ -4,49 +4,81 @@
 
 
 *{
-    margin: 0px;
+    margin: auto;
     padding: 0px;
 }
 
+body{
+
+    background-image: linear-gradient(45deg,rgb(129, 49, 49),rgb(31,31,31));
+    height: 94vh;
+    
+}
 section{
 
-    background-color: bisque;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
     text-align: center;
-    margin: auto;
-    margin-top: 125px;
-    max-width: 400px;
-    min-height: 500px;
-    max-height: 600px;
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.655);
+    width: 320px;
+    height: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.323);
+    padding: 20px;
+    background-color: rgba(165, 42, 42, 0.633);
+    
+    
     
 }
 
 section  h1{
     font-family: 'Bebas Neue', cursive;
     font-weight: bold;
-    font-size: 2.2em;
+    font-size: 2.4em;
     color: rgb(46, 45, 45);
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.316);
+    text-shadow: 1px 1px 1px rgba(31, 31, 31, 0.223);
 
 }
 
+#resultado{
+    background-color: rgb(42, 42, 42);
+    width: 280px;
+    height: 50px;
+    padding: 5px;
+    margin: auto;
+    font-family: 'Bebas Neue',cursive;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    color: rgb(119, 22, 22);
+    text-align: right;
+    font-size: 2.8em;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.401);
 
-.calculadora{
-    padding: 10px;
-    background-color: rgba(165, 42, 42, 0.779);
+}
+
+.botoes{
+
+    width: 70px;
+    height: 70px;
+    margin: 2.2px;
+    border-radius: 10px;
+    border: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.194);
+    font-size: 2em;
+    font-weight: bold;
+    background-color: rgb(90, 33, 33);
+    box-shadow: 2px 3px 10px rgba(63, 16, 16, 0.472);
+    transition-duration: 0.1s;
     
 }
-
-#sub_tela{
-
-    background-color:brown;
-
-    
+#botao-igual,#botao-zero{
+    width: 150px;
 }
-
-
-
-
-
+.botoes:hover{
+    cursor: pointer;
+    background-color: rgb(55, 15, 15);
+    text-shadow: 1px 1px 1px rgba(198, 197, 197, 0.361);
+    box-shadow: 1px 1px 1px rgba(198, 197, 197, 0.105);
+}

@@ -4,70 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/Sem título.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
 <body>
 
     
-    <section id="tela">
+    <section class="calculadora">
 
         
-        <div class="calculadora">
+        
             <h1>CALCULADORA v2.0</h1>
+
+            <div id="resultado">
+                <p></p>
+            </div>
             <table>
                 
                 <tr>
                     
-                    <td class="botoes"><button>C</button></td>
-                    <td class="botoes"><button>&#60-</button></td>
-                    <td class="botoes"><button>/</button></td>
-                    <td class="botoes"><button>X</button></td>
+                    <td><button class="botoes" onclick="apaga_numero()">&#60=</button></td>
+                    <td><button class="botoes" onclick="limpa_numeros()">C</button></td>
+                    <td><button class="botoes" onclick="pega_numero('/')">/</button></td>
+                    <td><button class="botoes" onclick="pega_numero('*')">X</button></td>
                     
                 </tr>
                 <tr>
                     
-                    <td class="botoes"><button>7</button></td>
-                    <td class="botoes"><button>8</button></td>
-                    <td class="botoes"><button>9</button></td>
-                    <td class="botoes"><button>+</button></td>
+                    <td><button class="botoes" onclick="pega_numero('7')">7</button></td>
+                    <td><button class="botoes" onclick="pega_numero('8')">8</button></td>
+                    <td><button class="botoes" onclick="pega_numero('9')">9</button></td>
+                    <td><button class="botoes" onclick="pega_numero('+')">+</button></td>
                     
                 </tr>
                 <tr>
                     
-                    <td class="botoes"><button>4</button></td>
-                    <td class="botoes"><button>5</button></td>
-                    <td class="botoes"><button>6</button></td>
-                    <td class="botoes"><button>-</button></td>
+                    <td><button class="botoes" onclick="pega_numero('4')">4</button></td>
+                    <td><button class="botoes" onclick="pega_numero('5')">5</button></td>
+                    <td><button class="botoes" onclick="pega_numero('6')">6</button></td>
+                    <td><button class="botoes" onclick="pega_numero('-')">-</button></td>
 
                     
                 </tr>
                 <tr>
                     
-                    <td class="botoes"><button>1</button></td>
-                    <td class="botoes"><button>2</button></td>
-                    <td class="botoes"><button>3</button></td>
-                    <td class="botoes"><button>.</button></td>
+                    <td><button class="botoes" onclick="pega_numero('1')">1</button></td>
+                    <td><button class="botoes" onclick="pega_numero('2')">2</button></td>
+                    <td><button class="botoes" onclick="pega_numero('3')">3</button></td>
+                    <td><button class="botoes" onclick="pega_numero('.')">.</button></td>
                     
                 </tr>
                 <tr>
-                    <td class="botoes" colspan="2"><button>0</button></td>
-                    <td class="botoes" colspan="2"><button>=</button></td>
+                    <td colspan="2"><button id="botao-igual" class="botoes" onclick="pega_numero('0')">0</button></td>
+                    <td colspan="2"><button id="botao-zero" class="botoes" onclick="calculo()">=</button></td>
                 </tr>
                 
             </table>
-        </div>
-
-        
-            
-           
-            
         
     </section>
     
     <footer>
-        
-        
         <script src="script.js"></script>
 
     </footer>

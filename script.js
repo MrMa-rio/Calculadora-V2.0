@@ -1,82 +1,35 @@
-function  zerar(){
-    calculadora_main.somatorio.numeros[calculadora_main.somatorio.numeros.length-1] = 0
-    resultado.style.textAlign = "end"
-    resultado.innerHTML = `0`
-    entrada.value = 0
-}
-function calculadora(){
+
+
+function pega_numero(numero){
     
-    const guarda_numeros = {
+    const somatoria = document.getElementById('resultado')
+    somatoria.innerHTML += `${numero}`
+    
 
-    numeros: [0,1,2,3,4]
 }
-const somatorio = {
-
-    numeros: [0]
-}
-return {
-    guarda_numeros,
-    somatorio,
-}
+function limpa_numeros(){
+    document.getElementById('resultado').value = 0
+    document.getElementById('resultado').innerHTML = ``
+    
 }
 
+function apaga_numero(){
 
-const entrada = document.getElementById("numero_input")
-const resultado = document.getElementById("resultado")
+    const apagador = document.getElementById("resultado")
+    document.getElementById("resultado").innerHTML = apagador.innerHTML.substring(0, apagador.innerHTML.length - 1)
+    
+}
 
-const calculadora_main = calculadora()
+function calculo(){
 
+    const calcula_numeros = document.getElementById('resultado')
+    if(calcula_numeros.innerText.length>0){
 
-function efeitos(evento){
-
-    function colorIn(evento){
-
-        const cor = document.getElementById(`opcao${evento}`)
-        if(evento == 0){
-            cor.style.boxShadow = "2px 2px 4px black"
-        }
-        else{
-            cor.style.boxShadow = "3px 5px 5px black"
-        }
+        document.getElementById('resultado').innerHTML = eval(calcula_numeros.innerText)
+    }
+    else{
         
+        alert("Valores Incorretos!")
     }
-    
-    function colorOut(evento){
-    
-        const cor = document.getElementById(`opcao${evento}`)
-        cor.style.boxShadow = "0px 0px 0px black"
-    }
-    
-    return
-    {
-    colorIn,
-    colorOut
-    }
+
 }
-
-
-function somar(numero){
-    numero = numero.value
-    calculadora_main.somatorio.numeros.push(calculadora_main.somatorio.numeros[calculadora_main.somatorio.numeros.length-1]+ Number(numero))
-    entrada.value = ``
-    
-    
-
-
-    
-}
-
-
-
-function resultado_(){
-
-    somar(entrada)
-
-   console.log(calculadora_main.somatorio.numeros[calculadora_main.somatorio.numeros.length-1])
-   resultado.style.textAlign = "end"
-   resultado.innerHTML = `${calculadora_main.somatorio.numeros[calculadora_main.somatorio.numeros.length-1]}`
-   calculadora_main.somatorio.numeros[calculadora_main.somatorio.numeros.length-1] = 0
-   
-}
-
-
