@@ -55,9 +55,31 @@ section  h1{
     text-align: right;
     font-size: 2.8em;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.401);
+    
+    
 
 }
+#resultado::-webkit-scrollbar{
+    
+    
+    width: 0px;
+    height: 5px;
+    
+    
+    
+}
+#resultado::-webkit-scrollbar-thumb:hover{
 
+    background-color: black;
+}
+
+#resultado::-webkit-scrollbar-thumb{
+
+    background-color: brown;
+    
+    border-radius: 30px;
+    
+}
 .botoes{
 
     width: 70px;
@@ -73,12 +95,18 @@ section  h1{
     transition-duration: 0.1s;
     
 }
-#botao-igual,#botao-zero{
-    width: 150px;
+#botao-igual{
+    
+    height: 150px ;
+    width: 70px;
+    
 }
 .botoes:hover{
     cursor: pointer;
     background-color: rgb(55, 15, 15);
     text-shadow: 1px 1px 1px rgba(198, 197, 197, 0.361);
     box-shadow: 1px 1px 1px rgba(198, 197, 197, 0.105);
+    width: 60px;
+    height: 60px;
+
 }

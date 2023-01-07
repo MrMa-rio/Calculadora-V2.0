@@ -15,7 +15,7 @@
 
         
         
-            <h1>CALCULADORA v2.0</h1>
+            <h1>CALCULADORA v2.1</h1>
 
             <div id="resultado">
                 <p></p>
@@ -24,10 +24,12 @@
                 
                 <tr>
                     
-                    <td><button class="botoes" onclick="apaga_numero()">&#60=</button></td>
+                    
                     <td><button class="botoes" onclick="limpa_numeros()">C</button></td>
+                    
                     <td><button class="botoes" onclick="pega_numero('/')">/</button></td>
                     <td><button class="botoes" onclick="pega_numero('*')">X</button></td>
+                    <td><button class="botoes" onclick="pega_numero('')"> <abbr title="Nao Funcional" style="text-decoration: none;">√</abbr> </button></td>
                     
                 </tr>
                 <tr>
@@ -52,12 +54,15 @@
                     <td><button class="botoes" onclick="pega_numero('1')">1</button></td>
                     <td><button class="botoes" onclick="pega_numero('2')">2</button></td>
                     <td><button class="botoes" onclick="pega_numero('3')">3</button></td>
-                    <td><button class="botoes" onclick="pega_numero('.')">.</button></td>
+                    <td rowspan="2"><button id="botao-igual" class="botoes" onclick="calculo()">=</button></td>
+                    
                     
                 </tr>
                 <tr>
-                    <td colspan="2"><button id="botao-igual" class="botoes" onclick="pega_numero('0')">0</button></td>
-                    <td colspan="2"><button id="botao-zero" class="botoes" onclick="calculo()">=</button></td>
+                    <td><button class="botoes" onclick="pega_numero('0')">0</button></td>
+                    <td><button class="botoes" onclick="pega_numero('.')">.</button></td>
+                    <td><button class="botoes" onclick="apaga_numero()">&#60=</button></td>
+                    
                 </tr>
                 
             </table>

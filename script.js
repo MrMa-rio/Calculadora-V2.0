@@ -4,6 +4,15 @@ function pega_numero(numero){
     
     const somatoria = document.getElementById('resultado')
     somatoria.innerHTML += `${numero}`
+    if(somatoria.innerText.length>15){
+        somatoria.style.overflow ='scroll'
+        somatoria.scrollLeft = '400'
+    }
+    if(somatoria.scrollLeft =='400'){
+
+        alert('numero maximo atingido')
+        apaga_numero()
+    }
     
 
 }
@@ -31,5 +40,10 @@ function calculo(){
         
         alert("Valores Incorretos!")
     }
+   /* if(calcula_numeros.innerText.length>10){
+        alert("Resultado avasalador")
+        alert(calcula_numeros.innerText)
+        limpa_numeros()
+    }*/
 
 }
