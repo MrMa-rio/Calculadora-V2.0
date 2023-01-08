@@ -6,7 +6,6 @@ function pega_numero(numero){
     somatoria.innerHTML += `${numero}`
     somatoria.style.overflow ='scroll'
     somatoria.scrollLeft = '400'
-
     if(somatoria.scrollLeft =='400'){
 
         alert('numero maximo atingido')
@@ -39,6 +38,4 @@ function calculo(){
         
         alert("Valores Incorretos!")
     }
-   
-
 }
